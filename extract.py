@@ -15,7 +15,7 @@ def get_stock_data(symbol, date):
 
         # Scarica i dati per l'intero mese contenente la data di interesse
         start_date = date.replace(day=1)
-        end_date = date.replace(day=28)  # Usiamo il 28 per sicurezza con febbraio
+        end_date = date.replace(day=30)  # Attenzione al mese di febbraio con 28 giorni
 
         # Scarica i dati
         data = yf.download(symbol, start=start_date, end=end_date, progress=False)
